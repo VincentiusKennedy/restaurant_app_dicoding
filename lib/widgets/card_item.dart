@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/models/restaurant.dart';
+import '../screens/restaurant_details.dart';
 
 class CardItem extends StatelessWidget {
   final Restaurant restaurant;
@@ -23,8 +24,8 @@ class CardItem extends StatelessWidget {
         ),
         child: InkWell(
           onTap: () {
-            // Navigator.pushNamed(context, RestaurantDetails.routeName,
-            //     arguments: restaurant);
+            Navigator.pushNamed(context, RestaurantDetails.routeName,
+                arguments: restaurant.id);
           },
           child: Column(
             children: [

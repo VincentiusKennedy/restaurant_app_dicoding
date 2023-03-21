@@ -15,25 +15,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Restaurant App',
-      theme: ThemeData(
-        colorScheme: Theme.of(context).colorScheme.copyWith(
-              primary: primaryColor,
-              onPrimary: Colors.black,
-              secondary: secondaryColor,
-            ),
-        scaffoldBackgroundColor: Color.fromARGB(255, 255, 222, 233),
-        textTheme: myTextTheme,
-        appBarTheme: const AppBarTheme(elevation: 0),
-      ),
-      initialRoute: HomePage.routeName,
-      routes: {
-        HomePage.routeName: (context) => const HomePage(),
-        // RestaurantDetails.routeName: (context) => RestaurantDetails(
-        //       restaurant:
-        //           ModalRoute.of(context)?.settings.arguments as Restaurant,
-        //     ),
-      },
-    );
+        title: 'Restaurant App',
+        theme: ThemeData(
+          colorScheme: Theme.of(context).colorScheme.copyWith(
+                primary: primaryColor,
+                onPrimary: Colors.black,
+                secondary: secondaryColor,
+              ),
+          scaffoldBackgroundColor: Color.fromARGB(255, 255, 222, 233),
+          textTheme: myTextTheme,
+          appBarTheme: const AppBarTheme(elevation: 0),
+        ),
+        initialRoute: HomePage.routeName,
+        routes: {
+          HomePage.routeName: (context) => const HomePage(),
+          RestaurantDetails.routeName: (context) => RestaurantDetails(
+                id: ModalRoute.of(context)?.settings.arguments as String,
+              ),
+        });
   }
 }
