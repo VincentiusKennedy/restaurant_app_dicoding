@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/widgets/restaurant_list_items.dart';
+import 'package:restaurant_app/screens/restaurant_list_items.dart';
 
 class HomePage extends StatelessWidget {
   static const routeName = '/home_page';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/models/restaurant.dart';
+import 'package:restaurant_app/data/models/restaurant.dart';
 import 'package:restaurant_app/screens/home_page.dart';
 import 'package:restaurant_app/screens/restaurant_details.dart';
 import 'common/styles.dart';
@@ -29,10 +29,10 @@ class MyApp extends StatelessWidget {
       initialRoute: HomePage.routeName,
       routes: {
         HomePage.routeName: (context) => const HomePage(),
-        RestaurantDetails.routeName: (context) => RestaurantDetails(
-              restaurant:
-                  ModalRoute.of(context)?.settings.arguments as Restaurant,
-            ),
+        // RestaurantDetails.routeName: (context) => RestaurantDetails(
+        //       restaurant:
+        //           ModalRoute.of(context)?.settings.arguments as Restaurant,
+        //     ),
       },
     );
   }
